@@ -4,7 +4,7 @@
 TOKEN="7195776728:AAHamEwzwFP49Ly0boGKCXMQ4Sure5TfklQ"  # Token do BOT
 CHAT_IDS=("-4504149047")  # Lista de IDs do grupo 
 URL="https://api.telegram.org/bot$TOKEN/sendMessage"  # URL da API do Telegram para enviar mensagens
-LIMITE=40  # Limite de temperatura para que o alerta seja enviado
+LIMITE=100  # Limite de temperatura para que o alerta seja enviado
 
 # Enviar mensagem para o Telegram
 send_message() {
@@ -41,7 +41,8 @@ while true; do
     echo -e "Mensagem enviada para o Telegram:\n$message"
     echo -e "$alert_message"
 
-    # sleep 7200  # Pausa o script por 2 horas (7200 segundos) antes de repetir o loop
+    # sleep 60
+    # Pausa o script por 2 horas (7200 segundos) antes de repetir o loop
     sleep 7200
 
 done
